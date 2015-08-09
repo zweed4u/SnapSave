@@ -1,6 +1,7 @@
 import os
 import urllib
 import urllib2
+from PIL import Image
 
 baseURL='https://feelinsonice-hrd.appspot.com/bq/blob'
 # 200 application/octet-stream
@@ -62,10 +63,13 @@ resp = urllib2.urlopen(req).read()
 snapPathFriendly=snapid.replace('/','_')
 
 #Save picture to subdirectory instead of current folder with src
-f=open(str(snapPathFriendly)+'.jpg','wb')
+f=open(os.getcwd()+'/Blobs/'+str(snapPathFriendly)+'.jpg','wb')
 f.write(resp)
 f.close()
 
-print "Blob-JPG saved to: "+os.getcwd()+'/'+str(snapPathFriendly)+'.jpg'
+print "\nBlob-JPG saved to: "+os.getcwd()+'/Blobs/'+str(snapPathFriendly)+'.jpg\nOpening...\n'
+img = Image.open(os.getcwd()+'/Blobs/'+str(snapPathFriendly)+'.jpg')
+img.show()
+
 
 
