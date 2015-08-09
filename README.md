@@ -1,7 +1,9 @@
 # SnapSave  
 ![alt text][logo]
 
-[logo]: https://github.com/zweed4u/SnapSave/blob/master/snap.png "@ZWeed4U"  
-Requires network sniffing knowledge to obtain necessary values of parameters in the viewing snap POST form. This pretty much a stub to just get my image hosted so I can include it above.   
+[logo]: https://github.com/zweed4u/SnapSave/blob/master/snap.png "Snap me! @ZWeed4U"  
+Requires network sniffing to obtain necessary values of fields in the POST form used in viewing a snap. Adds required headers to return the snap binary blob in jpg form.  
+Future commits will allow more flexiblity in prompts of version, hardware and locale.  
 
-@ZWeed4U
+[Contact/Follow @ZWeed4U](http://www.twitter.com/zweed4u)
+
