@@ -6,6 +6,30 @@ from PIL import Image
 baseURL='https://feelinsonice-hrd.appspot.com/bq/blob'
 # 200 application/octet-stream
 
+
+print "Please start snapchat on your device and go to the conversation of the message you wish to save/see. ~~DO NOT 'Tap to Load' yet~~"
+print "Continue? (y/n)"
+#Prompt y or n
+
+#Get user's ip and use as variable for display here VVVVV
+print "Route your device's traffic through a proxy (PC_IP:8080)..."
+print "Please run 'mitmdump -w outfile' we're going to grab necessary values for your headers and payload."
+print "Continue? (y/n)"
+#Prompt y or n
+
+print "Hit 'Tap to Load' on the desired snap"
+#Hopefully, mitmdump is capturing this flow
+print "Has it finished loading? (Now reads 'Tap to View')"
+#Prompt y or n - wait if n
+
+
+###PARSE outfile###
+#file io
+#split on 
+
+
+
+
 ### URLEncoded Form ###
 #######################
 print "\n~~~ URLEncoded Form data ~~~"
