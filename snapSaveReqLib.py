@@ -5,7 +5,9 @@ import time
 import errno
 import subprocess
 import threading
+import socket
 
+myLocalIP=([(s.connect(('8.8.8.8', 80)), s.getsockname()[0], s.close()) for s in [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][0][1])
 
 def timeout( p ):
 	if p.poll() is None:
@@ -25,7 +27,7 @@ print "Continue? (y/n)\n"
 #Prompt y or n
 
 #Get user's ip and use as variable for display here VVVVV
-print "Route your device's traffic through a proxy (PC_IP:8080)..."
+print "Route your device's traffic through an http proxy ("+str(myLocalIP)+":8080)..."
 print "Please running 'mitmdump'..."
 
 ##########SUBPROCESS ADDED##################
