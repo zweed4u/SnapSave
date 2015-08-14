@@ -1,25 +1,45 @@
 import os
 import requests
 from PIL import Image
+import time
+import errno
+import subprocess
+import threading
+
+
+def timeout( p ):
+	if p.poll() is None:
+        	try:
+        		p.kill()
+        	        print '20 seconds are up! Error: process taking too long to complete--terminating'
+       		except OSError as e: #race condition
+                	if e.errno != errno.ESRCH:
+                		raise
+
 
 url='https://feelinsonice-hrd.appspot.com/bq/blob'
 # 200 application/octet-stream
 
 print "Please start snapchat on your device and go to the conversation of the message you wish to save/see. ~~DO NOT 'Tap to Load' yet~~"
-print "Continue? (y/n)"
+print "Continue? (y/n)\n"
 #Prompt y or n
 
 #Get user's ip and use as variable for display here VVVVV
 print "Route your device's traffic through a proxy (PC_IP:8080)..."
-print "Please run 'mitmdump -w outfile' we're going to grab necessary values for your headers and payload."
-print "Continue? (y/n)"
-#Prompt y or n
+print "Please running 'mitmdump'..."
 
+##########SUBPROCESS ADDED##################
+#Hopefully, mitmdump is capturing flow
+print "Capturing flows for 20 seconds"
 print "Hit 'Tap to Load' on the desired snap"
-#Hopefully, mitmdump is capturing this flow
-print "Has it finished loading? (Now reads 'Tap to View')"
-#Prompt y or n - wait if n
-
+#args=['q','-w','outfile']
+#wish to see requests? exlude -q
+proc = subprocess.Popen(['mitmdump','-q','-w','outfile'])#silent
+#proc = subprocess.Popen(['mitmdump','-q','-w','outfile'])#verbose-ish
+t = threading.Timer( 20.0, timeout, [proc] )
+t.start()
+t.join()
+#############################################
 
 ###PARSE outfile###
 #file io
