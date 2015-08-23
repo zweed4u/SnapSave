@@ -28,7 +28,7 @@ print "Continue? (y/n)\n"
 
 #Get user's ip and use as variable for display here VVVVV
 print "Route your device's traffic through an http proxy ("+str(myLocalIP)+":8080)..."
-print "Please running 'mitmdump'..."
+raw_input("Please press Enter to begin capture of flows. (you'll 20 seconds)")
 
 ##########SUBPROCESS ADDED##################
 #Hopefully, mitmdump is capturing flow
@@ -92,6 +92,7 @@ headers = {
 	  	'Accept-Encoding': 'gzip'
 	}
 #'Content-Length', '138'
+#'X-Snapchat-UUID', '*'
 
 
 #Payload

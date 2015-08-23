@@ -30,7 +30,7 @@ print "Continue? (y/n)\n"
 
 #Get user's ip and use as variable for display here VVVVV
 print "Route your device's traffic through an http proxy ("+str(myLocalIP)+":8080)..."
-print "Running 'mitmdump'..."
+raw_input("Please press Enter to begin capture of flows. (you'll 20 seconds)")
 
 ##########SUBPROCESS ADDED##################
 #Hopefully, mitmdump is capturing flow
@@ -102,6 +102,7 @@ req.add_header('User-Agent', 'Snapchat/9.13.0.0 (iPhone6,1; iOS 8.1.2; gzip)')
 req.add_header('Accept-Language', 'en;q=1')
 req.add_header('Accept-Encoding', 'gzip')
 #req.add_header('Content-Length', '138')
+#req.add_header('X-Snapchat-UUID', '*')
 
 resp = urllib2.urlopen(req).read()
 #print resp
