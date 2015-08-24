@@ -5,8 +5,9 @@
 
 "They’ll view it, laugh, and then the Snap disappears from the screen – unless they take a screenshot!"...or do 'they'? 
 
-SnapSave allows savvy users to replicate a request when loading a snap.
-Route traffic from your device through a proxy, open snapchat, 'tap to load' the snap of interest and seek how to replicate.  
+SnapSave allows *somewhat* savvy users to replicate a request when loading a snap.  
+All you need is mitmproxy!  
+Route traffic from your device through a proxy, open snapchat, 'tap to load' the snap of interest and ~~seek how to replicate.~~ let snapSave do the rest.  
 * Two Scripts, Two Libraries! (sorta)
  * Pick your poison with either the urllib module or the request library  
 * Requires network sniffing to obtain necessary values of fields in the POST form used in viewing a snap  
