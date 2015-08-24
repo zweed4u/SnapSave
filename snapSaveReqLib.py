@@ -7,7 +7,19 @@ import subprocess
 import threading
 import socket
 
+
+
 myLocalIP=([(s.connect(('8.8.8.8', 80)), s.getsockname()[0], s.close()) for s in [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][0][1])
+
+#Flags for parse
+ua='nullDefault';
+token='nullDefault';
+uuid='nullDefault';
+prefill='nullDefault';
+funcFlag='0'	
+
+#Throw in list/array to make check easier with an 'if any()'
+items=[ua,token,uuid,prefill]
 
 def timeout( p ):
 	if p.poll() is None:
@@ -18,6 +30,30 @@ def timeout( p ):
                 	if e.errno != errno.ESRCH:
                 		raise
 
+
+def outfileParse(items,ua,token,uuid,prefill,funcFlag):
+	#Read file
+	with open('outfile', 'r') as inF:
+	    for index, line in enumerate(inF):
+		#Hot word - Narrows our focus
+		host = "/bq/blob"
+		#Scary string manipulation - hopefully the format is the same for everyone
+		if host in line:
+			ua=line.split('User-Agent,')[1].split(':')[1].split(',]')[0];
+			token="v3"+line.split('X-Snapchat-Client-Auth-Token,')[1].split(':v3')[1].split(',]')[0];
+			uuid=line.split('X-Snapchat-UUID,')[1].split(':')[1].split(',]')[0];
+			prefill='?'+'id='+line.split('content')[1].split(':id=')[1].split(',')[0];	
+
+	#Update list with possible changed vars
+	items=[ua,token,uuid,prefill]
+	#Check if any vars in list have default flag
+	if any(x in 'nullDefault' for x in items):
+		print "Sorry, data not found\nAre you sure you loaded the snap?";
+		return funcFlag;
+	else:	
+		#print "Values should have changed. =)"
+		funcFlag='1';
+		return items;
 
 url='https://feelinsonice-hrd.appspot.com/bq/blob'
 # 200 application/octet-stream
@@ -41,16 +77,27 @@ proc = subprocess.Popen(['mitmdump','-q','-w','outfile'])#silent
 t = threading.Timer( 20.0, timeout, [proc] )
 t.start()
 t.join()
+
+
 #############################################
 
 ###PARSE outfile###
-#file io
-#split on 
+items=outfileParse(items,ua,token,uuid,prefill,funcFlag);
+##Check if null defual in any index -- if so terminate.
+ua=items[0];
+token=items[1];
+uuid=items[2];
+prefill=items[3];
+#if funcFlag='0' ~~~ redo term program -- else continue parse
 
 
 session=requests.Session()
 ### URLEncoded Form ###
 #######################
+
+
+
+'''
 print "\n~~~ URLEncoded Form data ~~~"
 print "Snap post id:"
 #check if 'r' in string (last char)
@@ -76,6 +123,15 @@ username = raw_input('')
 print "\nPlease enter your Auth key:"
 RAW_Auth_Token = raw_input('')
 Auth_Token=str(str(RAW_Auth_Token).replace('\n','').replace(' ',''))
+'''
+
+
+snapid = prefill.split('=')[1].split('&')[0];
+req_token = prefill.split('=')[2].split('&')[0];
+timestamp = prefill.split('=')[3].split('&')[0];
+username =  prefill.split('=')[4].split('&')[0];
+
+
 
 ################NAME,##VALUE###########################
 #Headers for POST request
@@ -84,22 +140,22 @@ headers = {
 	  	'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
 	 	'Connection': 'keep-alive',
 	 	'Accept-Locale': 'en_US',
-	 	'X-Snapchat-Client-Auth-Token': str(Auth_Token),
+	 	'X-Snapchat-Client-Auth-Token':token,
 	  	'Proxy-Connection': 'keep-alive',
 	  	'Accept': '*/*',
-	  	'User-Agent': 'Snapchat/9.13.0.0 (iPhone6,1; iOS 8.1.2; gzip)',
+	  	'User-Agent': ua,
 	  	'Accept-Language': 'en;q=1',
 	  	'Accept-Encoding': 'gzip'
 	}
 #'Content-Length', '138'
-#'X-Snapchat-UUID', '*'
+#'X-Snapchat-UUID', uuid
 
 
 #Payload
-data={'id': str(snapid),
-	  'req_token': str(req_token),
-	  'timestamp': str(timestamp),
-	  'username': str(username)}
+data={'id': snapid,
+	  'req_token': req_token,
+	  'timestamp': timestamp,
+	  'username': username}
 
 session.cookies.clear()
 response=session.post(url,data=data,headers=headers)
