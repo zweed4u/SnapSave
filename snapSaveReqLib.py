@@ -23,7 +23,7 @@ def timeout( p ):
 	if p.poll() is None:
         	try:
         		p.kill()
-        	        print '20 seconds are up! Error: process taking too long to complete--terminating'
+        	        print '5 seconds are up! --terminating'
        		except OSError as e: #race condition
                 	if e.errno != errno.ESRCH:
                 		raise
@@ -60,17 +60,17 @@ raw_input("Please press Enter to Continue")
 
 #Get user's ip and use as variable for display here VVVVV
 print "Route your device's traffic through an http proxy ("+str(myLocalIP)+":8080)..."
-raw_input("Please press Enter to begin capture of flows. (you'll 20 seconds)")
+raw_input("Please press Enter to begin capture of flows.\nYou'll have 10 seconds.\nDuring this time you just need to 'Tap to Load' the snap you wish to see/save.")
 
 ##########SUBPROCESS ADDED##################
 #Hopefully, mitmdump is capturing flow
-print "Capturing flows for 20 seconds"
+print "Capturing flows for 10 seconds"
 print "Hit 'Tap to Load' on the desired snap"
 #args=['q','-w','outfile']
 #wish to see requests? exlude -q
 proc = subprocess.Popen(['mitmdump','-q','-w','outfile'])#silent
 #proc = subprocess.Popen(['mitmdump','-q','-w','outfile'])#verbose-ish
-t = threading.Timer( 20.0, timeout, [proc] )
+t = threading.Timer( 10.0, timeout, [proc] )
 t.start()
 t.join()
 #############################################
