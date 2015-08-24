@@ -13,7 +13,7 @@ Route traffic from your device through a proxy, open snapchat, 'tap to load' the
 * Requires network sniffing to obtain necessary values of fields in the POST form used in viewing a snap  
 * Adds required headers to return the snap binary blob in jpg form  
 
-Future updates will allow more flexiblity in prompts of version, hardware and locale as well as allow for story downloads amongst other things.  
+Future updates will allow more flexiblity in locale as well as allow for story downloads amongst other things.  
 
 Contact/Follow: [@ZWeed4U](http://www.twitter.com/zweed4u)
 
