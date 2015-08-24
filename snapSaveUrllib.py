@@ -28,6 +28,7 @@ def timeout( p ):
        		except OSError as e: #race condition
                 	if e.errno != errno.ESRCH:
                 		raise
+
 def outfileParse(items,ua,token,uuid,prefill,funcFlag):
 	#Read file
 	with open('outfile', 'r') as inF:
@@ -52,14 +53,11 @@ def outfileParse(items,ua,token,uuid,prefill,funcFlag):
 		funcFlag='1';
 		return items;
 
-
 baseURL='https://feelinsonice-hrd.appspot.com/bq/blob'
 # 200 application/octet-stream
 
-
 print "Please start snapchat on your device and go to the conversation of the message you wish to save/see. ~~DO NOT 'Tap to Load' yet~~"
-print "Continue? (y/n)\n"
-#Prompt y or n
+raw_input("Please press Enter to Continue")
 
 #Get user's ip and use as variable for display here VVVVV
 print "Route your device's traffic through an http proxy ("+str(myLocalIP)+":8080)..."
@@ -80,6 +78,7 @@ t.join()
 
 ###PARSE outfile###
 items=outfileParse(items,ua,token,uuid,prefill,funcFlag);
+
 ##Check if null defual in any index -- if so terminate.
 ua=items[0];
 token=items[1];
@@ -87,12 +86,8 @@ uuid=items[2];
 prefill=items[3];
 #if funcFlag='0' ~~~ redo term program -- else continue parse
 
-
-
 ### URLEncoded Form ###
 #######################
-
-
 '''
 print "\n~~~ URLEncoded Form data ~~~"
 print "Snap post id:"
@@ -116,6 +111,7 @@ prefilledURL=str(baseURL)+'?id='+str(snapid)+'&req_token='+str(req_token)+'&time
 
 #print '\n'+str(prefilledURL)
 '''
+
 prefilledURL=str(baseURL)+prefill
 snapid = prefill.split('=')[1].split('&')[0];
 req_token = prefill.split('=')[2].split('&')[0];
@@ -131,7 +127,6 @@ print "\nPlease enter your Auth key:"
 RAW_Auth_Token = raw_input('')
 Auth_Token=str(str(RAW_Auth_Token).replace('\n','').replace(' ',''))
 '''
-
 
 ################NAME,##VALUE###########################
 req.add_header('Host', 'feelinsonice-hrd.appspot.com')
@@ -164,6 +159,3 @@ f.close()
 print "\nBlob-JPG saved to: "+os.getcwd()+'/Blobs/'+str(snapPathFriendly)+'.jpg\nOpening...\n'
 img = Image.open(os.getcwd()+'/Blobs/'+str(snapPathFriendly)+'.jpg')
 img.show()
-
-
-

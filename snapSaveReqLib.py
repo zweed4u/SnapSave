@@ -7,8 +7,6 @@ import subprocess
 import threading
 import socket
 
-
-
 myLocalIP=([(s.connect(('8.8.8.8', 80)), s.getsockname()[0], s.close()) for s in [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][0][1])
 
 #Flags for parse
@@ -29,7 +27,6 @@ def timeout( p ):
        		except OSError as e: #race condition
                 	if e.errno != errno.ESRCH:
                 		raise
-
 
 def outfileParse(items,ua,token,uuid,prefill,funcFlag):
 	#Read file
@@ -59,8 +56,7 @@ url='https://feelinsonice-hrd.appspot.com/bq/blob'
 # 200 application/octet-stream
 
 print "Please start snapchat on your device and go to the conversation of the message you wish to save/see. ~~DO NOT 'Tap to Load' yet~~"
-print "Continue? (y/n)\n"
-#Prompt y or n
+raw_input("Please press Enter to Continue")
 
 #Get user's ip and use as variable for display here VVVVV
 print "Route your device's traffic through an http proxy ("+str(myLocalIP)+":8080)..."
@@ -77,12 +73,11 @@ proc = subprocess.Popen(['mitmdump','-q','-w','outfile'])#silent
 t = threading.Timer( 20.0, timeout, [proc] )
 t.start()
 t.join()
-
-
 #############################################
 
 ###PARSE outfile###
 items=outfileParse(items,ua,token,uuid,prefill,funcFlag);
+
 ##Check if null defual in any index -- if so terminate.
 ua=items[0];
 token=items[1];
@@ -90,13 +85,10 @@ uuid=items[2];
 prefill=items[3];
 #if funcFlag='0' ~~~ redo term program -- else continue parse
 
-
 session=requests.Session()
+
 ### URLEncoded Form ###
 #######################
-
-
-
 '''
 print "\n~~~ URLEncoded Form data ~~~"
 print "Snap post id:"
@@ -118,20 +110,16 @@ username = raw_input('')
 
 #print '\n'+str(prefilledURL)
 
-
 #Header
 print "\nPlease enter your Auth key:"
 RAW_Auth_Token = raw_input('')
 Auth_Token=str(str(RAW_Auth_Token).replace('\n','').replace(' ',''))
 '''
 
-
 snapid = prefill.split('=')[1].split('&')[0];
 req_token = prefill.split('=')[2].split('&')[0];
 timestamp = prefill.split('=')[3].split('&')[0];
 username =  prefill.split('=')[4].split('&')[0];
-
-
 
 ################NAME,##VALUE###########################
 #Headers for POST request
@@ -149,7 +137,6 @@ headers = {
 	}
 #'Content-Length', '138'
 #'X-Snapchat-UUID', uuid
-
 
 #Payload
 data={'id': snapid,
