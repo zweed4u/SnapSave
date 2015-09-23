@@ -1,0 +1,187 @@
+friendmoji_dict: {
+robin: {
+type: 0,
+source: "🙏",
+default_type: 0,
+default_val: "🙏",
+emoji_legend_rank: -1
+},
+hundred_streak: {
+type: 0,
+source: "💯",
+default_type: 0,
+default_val: "💯",
+emoji_legend_rank: -1
+},
+your_number_one_bf_is_their_number_one_bf: {
+type: 0,
+source: "😁",
+default_type: 0,
+default_val: "😁",
+emoji_legend_rank: 5
+},
+number_one_bf_for_two_weeks: {
+type: 0,
+source: "❤️",
+default_type: 0,
+default_val: "❤️",
+emoji_legend_rank: 1
+},
+catwomen: {
+type: 0,
+source: "🌺",
+default_type: 0,
+default_val: "🌺",
+emoji_legend_rank: -1
+},
+on_fire: {
+type: 0,
+source: "🔥",
+default_type: 0,
+default_val: "🔥",
+emoji_legend_rank: 7
+},
+one_of_your_bf: {
+type: 0,
+source: "😊",
+default_type: 0,
+default_val: "😊",
+emoji_legend_rank: 3
+},
+you_share_BF: {
+type: 0,
+source: "😎",
+default_type: 0,
+default_val: "😎",
+emoji_legend_rank: 6
+},
+batman: {
+type: 0,
+source: "👻",
+default_type: 0,
+default_val: "👻",
+emoji_legend_rank: -1
+},
+number_one_bf: {
+type: 0,
+source: "💛",
+default_type: 0,
+default_val: "💛",
+emoji_legend_rank: 2
+},
+new_friend: {
+type: 0,
+source: "👶",
+default_type: 0,
+default_val: "👶",
+emoji_legend_rank: 8
+},
+you_are_one_of_there_bf_but_they_are_not_your: {
+type: 0,
+source: "😏",
+default_type: 0,
+default_val: "😏",
+emoji_legend_rank: 4
+},
+number_one_bf_for_two_months: {
+type: 0,
+source: "💕",
+default_type: 0,
+default_val: "💕",
+emoji_legend_rank: 0
+}
+},
+
+friendmoji_mutable_dict: {
+number_one_bf_for_two_weeks: {
+type: 0,
+source: "❤️",
+title: "BFF",
+emoji_desc: "Appears next to your #1 Best Friend when you're also their #1 Best Friend - for two weeks in a row.",
+emoji_picker_desc: "The Friend Emoji appears next to your #1 Best Friend when you're also their #1 Best Friend - for two weeks in a row.",
+default_type: 0,
+default_val: "❤️",
+emoji_legend_rank: 1
+},
+your_number_one_bf_is_their_number_one_bf: {
+type: 0,
+source: "😁",
+title: "Mutual Besties",
+emoji_desc: "Appears next to someone when your #1 Best Friend is also their #1 Best Friend.",
+emoji_picker_desc: "The Friend Emoji appears next to someone when your #1 Best Friend is also their #1 Best Friend.",
+default_type: 0,
+default_val: "😁",
+emoji_legend_rank: 5
+},
+on_fire: {
+type: 0,
+source: "🔥",
+title: "Snapstreak!",
+emoji_desc: "Appears next to someone who you've Snapped with for several days in a row - miss a day and it's gone!",
+emoji_picker_desc: "The Friend Emoji appears next to someone who you've Snapped with for several days in a row - miss a day and it's gone!.",
+default_type: 0,
+default_val: "🔥",
+emoji_legend_rank: 7
+},
+you_share_BF: {
+type: 0,
+source: "😎",
+title: "Mutual BFs",
+emoji_desc: "Appears next to someone who you share a Best Friend with.",
+emoji_picker_desc: "The Friend Emoji appears next to someone who you share a Best Friend with.",
+default_type: 0,
+default_val: "😎",
+emoji_legend_rank: 6
+},
+one_of_your_bf: {
+type: 0,
+source: "😊",
+title: "BFs",
+emoji_desc: "Appears next to one of your Best Friends.",
+emoji_picker_desc: "The Friend Emoji appears next to one of your Best Friends.",
+default_type: 0,
+default_val: "😊",
+emoji_legend_rank: 3
+},
+number_one_bf: {
+type: 0,
+source: "💛",
+title: "Besties",
+emoji_desc: "Appears next to your #1 Best Friend when you're also their #1 Best Friend.",
+emoji_picker_desc: "The Friend Emoji appears next to your #1 Best Friend when you're also their #1 Best Friend.",
+default_type: 0,
+default_val: "💛",
+emoji_legend_rank: 2
+},
+new_friend: {
+type: 0,
+source: "👶",
+title: "New friend",
+emoji_desc: "Appears next to someone who is a new friend.",
+emoji_picker_desc: "The Friend Emoji appears next to someone who is a new friend.",
+default_type: 0,
+default_val: "👶",
+emoji_legend_rank: 8
+},
+number_one_bf_for_two_months: {
+type: 0,
+source: "💕",
+title: "Super BFF",
+emoji_desc: "Appears next to your #1 Best Friend when you're also their #1 Best Friend - for two months in a row.",
+emoji_picker_desc: "The Friend Emoji appears next to your #1 Best Friend when you're also their #1 Best Friend - for two months in a row.",
+default_type: 0,
+default_val: "💕",
+emoji_legend_rank: 0
+},
+you_are_one_of_there_bf_but_they_are_not_your: {
+type: 0,
+source: "😏",
+title: "Their BF, but...",
+emoji_desc: "Appears next to someone when you are one of their Best Friends, but they are not one of yours.",
+emoji_picker_desc: "The Friend Emoji appears next to someone when you are one of their Best Friends, but they are not one of yours.",
+default_type: 0,
+default_val: "😏",
+emoji_legend_rank: 4
+}
+},
+
