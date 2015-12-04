@@ -57,6 +57,7 @@ baseURL='https://feelinsonice-hrd.appspot.com/bq/blob'
 # 200 application/octet-stream
 
 #Get user's ip and use as variable for display here VVVVV
+print "Please visit 'http://www.mitm.it' on your device and install the mitmproxy certificate.\n"
 print "Route your device's traffic through an http proxy ("+str(myLocalIP)+":8080)... Make sure it's on the same wireless network as this PC\n"
 print "On iPhone: Settings> Wi-Fi> [your network]> HTTP PROXY> Manual"
 print "Server: " +str(myLocalIP)+'\nPort: 8080\nAuthentication: OFF\n'
@@ -71,7 +72,7 @@ print "Hit 'Tap to Load' on the desired snap"
 #args=['q','-w','outfile']
 #wish to see requests? exlude -q
 proc = subprocess.Popen(['mitmdump','-q','-w','outfile'])#silent
-#proc = subprocess.Popen(['mitmdump','-q','-w','outfile'])#verbose-ish
+#proc = subprocess.Popen(['mitmdump','-w','outfile'])#verbose-ish
 t = threading.Timer( 10.0, timeout, [proc] )
 t.start()
 t.join()
@@ -89,30 +90,6 @@ prefill=items[3];
 
 ### URLEncoded Form ###
 #######################
-'''
-print "\n~~~ URLEncoded Form data ~~~"
-print "Snap post id:"
-#check if 'r' in string (last char)
-snapid = raw_input('')
-#'id' is a reserved word -_-
-
-print "\nReq_token:"
-#check length?
-req_token = raw_input('')
-
-print "\nUnix timestamp:"
-#Convert current time? - 
-#eg. 1439057823280
-timestamp = raw_input('')
-
-print "\nYour username?"
-username = raw_input('')
-
-prefilledURL=str(baseURL)+'?id='+str(snapid)+'&req_token='+str(req_token)+'&timestamp='+str(timestamp)+'&username='+str(username)
-
-#print '\n'+str(prefilledURL)
-'''
-
 prefilledURL=str(baseURL)+prefill
 snapid = prefill.split('=')[1].split('&')[0];
 req_token = prefill.split('=')[2].split('&')[0];
@@ -121,13 +98,6 @@ username =  prefill.split('=')[4].split('&')[0];
 
 #Migrated to urllib2 for header capability
 req = urllib2.Request(prefilledURL)
-
-'''
-#Header
-print "\nPlease enter your Auth key:"
-RAW_Auth_Token = raw_input('')
-Auth_Token=str(str(RAW_Auth_Token).replace('\n','').replace(' ',''))
-'''
 
 ################NAME,##VALUE###########################
 req.add_header('Host', 'feelinsonice-hrd.appspot.com')
