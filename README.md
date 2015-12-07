@@ -13,6 +13,9 @@ Route traffic from your device through a proxy, open snapchat, 'tap to load' the
 * Requires network sniffing to obtain necessary values of fields in the POST form used in viewing a snap  
 * Adds required headers to return the snap binary blob in jpg form  
 
+Tested on v9.14.2.0 via iOS 8.1.2  
+9.20.X supports ca pinning which kills traffic sniffing. Downgrade to an earlier ipa.  
+However, a ping request is observable and returns. See png  
 Future updates will allow more flexiblity in locale as well as allow for story downloads amongst other things.  
 
 Contact/Follow: [@ZWeed4U](http://www.twitter.com/zweed4u)
