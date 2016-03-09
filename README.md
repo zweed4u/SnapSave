@@ -25,7 +25,7 @@ Now that the debian package has been downloaded. Install this package as a root 
 ->dpkg -i SSLKillSwitch2_0.10.deb<-
 
 Run:  
-->killall -HUP SpringBoard<-  
+<center>killall -HUP SpringBoard</center>  
 
 After respring, go into Settings->SSL Kill Switch->Enable "Disable Certificate Validation"
 Make sure to close SnapChat if running in the background.  
