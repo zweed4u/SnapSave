@@ -18,14 +18,17 @@ Tested on v9.14.2.0 via iOS 8.1.2
 However, a ping request is observable and returns. See png~~  
 
 
-To circumvent this, on your device run the following command via MobileTerminal:  
-* wget bit.ly/SSLKillSwitch2Deb -O SSLKillSwitch2_0.10.deb 
+To circumvent this, on your device run the following command via MobileTerminal:
 
-Now that the debian package has been downloaded. Install this package as a root user via the command:  
-* dpkg -i SSLKillSwitch2_0.10.deb
+    wget bit.ly/SSLKillSwitch2Deb -O SSLKillSwitch2_0.10.deb 
 
-Run:  
-* killall -HUP SpringBoard  
+Now that the debian package has been downloaded. Install this package as a root user via the command:
+
+    dpkg -i SSLKillSwitch2_0.10.deb
+
+Run:
+
+    killall -HUP SpringBoard  
 
 After respring, go into Settings->SSL Kill Switch->Enable "Disable Certificate Validation"
 Make sure to close SnapChat if running in the background.  
