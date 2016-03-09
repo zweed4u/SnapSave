@@ -14,8 +14,25 @@ Route traffic from your device through a proxy, open snapchat, 'tap to load' the
 * Adds required headers to return the snap binary blob in jpg form  
 
 Tested on v9.14.2.0 via iOS 8.1.2  
-9.20.X supports ca pinning which kills traffic sniffing. Downgrade to an earlier ipa.  
-However, a ping request is observable and returns. See png  
+9.2X.X supports ca pinning which kills traffic sniffing. ~~Downgrade to an earlier ipa.  
+However, a ping request is observable and returns. See png~~  
+
+
+To circumvent this, on your device run the following command via MobileTerminal:  
+->wget bit.ly/SSLKillSwitch2Deb -O SSLKillSwitch2_0.10.deb<- 
+
+Now that the debian package has been downloaded. Install this package as a root user via the command:  
+->dpkg -i SSLKillSwitch2_0.10.deb<-
+
+Run:  
+->killall -HUP SpringBoard<-  
+
+After respring, go into Settings->SSL Kill Switch->Enable "Disable Certificate Validation"
+Make sure to close SnapChat if running in the background.  
+
+Proceed with the application as normal.
+
+
 Future updates will allow more flexiblity in locale as well as allow for story downloads amongst other things.  
 
 Contact/Follow: [@ZWeed4U](http://www.twitter.com/zweed4u)
