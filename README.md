@@ -13,8 +13,8 @@ Route traffic from your device through a proxy, open snapchat, 'tap to load' the
 * Requires network sniffing to obtain necessary values of fields in the POST form used in viewing a snap  
 * Adds required headers to return the snap binary blob in jpg form  
 
-Requires proper installation of certificate via visiting mitm.it on your device.  
-Also requires mimproxy for the actual subprocess  
+Requires proper installation of certificate via visiting [mitm.it](http://mitm.it/) on your device.  
+Also requires [mimproxy](http://mitmproxy.org/doc/install.html) for the actual subprocess  
 
 Tested on v9.14.2.0 via iOS 8.1.2  
 9.2X.X supports ca pinning which kills traffic sniffing.  
