@@ -37,7 +37,7 @@ def outfileParse(items,ua,token,uuid,prefill,funcFlag):
 		#Scary string manipulation - hopefully the format is the same for everyone
 		if host in line:
 			ua=line.split('User-Agent,')[1].split(':')[1].split(',]')[0];
-			token="v3"+line.split('X-Snapchat-Client-Auth-Token,')[1].split(':v3')[1].split(',]')[0];
+			token="v5"+line.split('X-Snapchat-Client-Auth-Token,')[1].split(':v5')[1].split(',]')[0];
 			uuid=line.split('X-Snapchat-UUID,')[1].split(':')[1].split(',]')[0];
 			prefill='?'+'id='+line.split('content')[1].split(':id=')[1].split(',')[0];	
 
@@ -58,7 +58,7 @@ url='https://feelinsonice-hrd.appspot.com/bq/blob'
 #Get user's ip and use as variable for display here VVVVV
 print "Please visit 'http://www.mitm.it' on your device and install the mitmproxy certificate.\n"
 print "Route your device's traffic through an http proxy ("+str(myLocalIP)+":8080)... Make sure it's on the same wireless network as this PC\n"
-print "On iPhone: Settings> Wi-Fi> [your network]> HTTP PROXY> Manual"
+print "On iPhone:\nSettings>SSL Kill Switch 2>Enable 'Disable Certificate Validation'\n\nSettings> Wi-Fi> [your network]> HTTP PROXY> Manual"
 print "Server: " +str(myLocalIP)+'\nPort: 8080\nAuthentication: OFF\n'
 print "Please start snapchat on your device and go to the conversation of the message you wish to save/see. ~~DO NOT 'Tap to Load' yet~~"
 raw_input("Please press Enter when you're in the correct thread/conversation of the desired snap\n")
