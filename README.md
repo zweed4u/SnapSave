@@ -17,7 +17,7 @@ Requires proper installation of certificate via visiting [mitm.it](http://mitm.i
 Also requires [mimproxy](http://mitmproxy.org/doc/install.html) for the actual subprocess  
 
 Tested on v9.26.0.0 via iOS 8.1.2  
-9.2X.X supports ca pinning which kills traffic sniffing.  
+9.2X.X supports ca pinning which thwarts traffic sniffing.  
 ~~Downgrade to an earlier ipa.~~  
 
 
@@ -45,7 +45,7 @@ Python >=3.0
 
 Files will be hosted in this repository as well.
 
-Install via pip: 
+Install tar via pip: 
 
     sudo pip install getch-1.0*
 
