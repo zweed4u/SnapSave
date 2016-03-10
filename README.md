@@ -37,11 +37,11 @@ Root password is required to ssh and execute commands for debian package install
 
 Python 2.X 
 
-    wget https://pypi.python.org/packages/source/g/getch/getch-1.0-python2.tar.gz#md5=586ea0f1f16aa094ff6a30736ba03c50
+    wget https://pypi.python.org/packages/source/g/getch/getch-1.0-python2.tar.gz
 
 Python >=3.0 
 
-    wget https://pypi.python.org/packages/source/g/getch/getch-1.0.tar.gz#md5=57519f64807285bdfff8e7b62844d3ef
+    wget https://pypi.python.org/packages/source/g/getch/getch-1.0.tar.gz
 
 Files will be hosted in this repository as well.
 
