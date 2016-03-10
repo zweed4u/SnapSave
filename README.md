@@ -32,7 +32,8 @@ Tested on v9.26.0.0 via iOS 8.1.2
 ~~Proceed with the application as normal.~~
 
 
-All handled via paramiko. Root password is required to ssh and execute commands for debian package installation. For secure input of password wildcards are echoed. For this to work, getch must be installed via tar.
+All handled via [paramiko](http://www.paramiko.org/).  
+Root password is required to ssh and execute commands for debian package installation. For secure input of password wildcards are echoed. For this to work, getch must be installed via tar.
 
 Python 2.X 
 
