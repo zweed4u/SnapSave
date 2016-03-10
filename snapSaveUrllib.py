@@ -1,13 +1,34 @@
-import os, urllib, urllib2, time, errno, subprocess, threading, socket, paramiko, sys
+import os, urllib, urllib2, time, errno, subprocess, threading, socket, paramiko, sys, getch
 from PIL import Image
 from scp import SCPClient
 
+def cli_getch():
+	pswd="";
+	gc="";
+	while 1:
+		gc = getch.getch();
+		if gc=="\n":
+			print gc;
+			break;
+		elif gc == '\x08' or gc == '\x7f': 
+			pswd = pswd[:-1]
+		else:
+			pswd += gc;
+		sys.stdout.write("*")
+	return pswd;
+
+
+
 #SSHv2 in Python
+print '\n'
 debInstall=raw_input("Do you need to install SSL KillSwitch? (y/n) ")
 if debInstall=='y' or debInstall=='Y':
 	relPath=os.getcwd()
-	iphone_ip=raw_input("What is your iphone's ip? (Settings>Wi-Fi>i>IP Address) ")
-	iphone_pw=raw_input("What is your iphone's root password? ('alpine' by default) ")
+	print '\n'
+	iphone_ip=raw_input("What is your iphone's ip? (Settings>Wi-Fi>i>IP Address): ")
+	
+	print "What is your iphone's root password? ('alpine' by default): "
+	iphone_pw=cli_getch();
 
 	ssh = paramiko.SSHClient()
 	ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -20,7 +41,9 @@ if debInstall=='y' or debInstall=='Y':
 	print '\n'
 	for i in stdout.readlines():
 		print i
-	print '\n'
+	stdin, stdout, stderr = ssh.exec_command('killall -HUP SpringBoard')
+	print 'Respringing.. Please Wait!\n'
+	time.sleep(10)
 elif debInstall=='n' or debInstall=='N':
 	pass
 else:
