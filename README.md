@@ -16,13 +16,12 @@ Route traffic from your device through a proxy, open snapchat, 'tap to load' the
 Requires proper installation of certificate via visiting [mitm.it](http://mitm.it/) on your device.  
 Also requires [mimproxy](http://mitmproxy.org/doc/install.html) for the actual subprocess  
 
-Tested on v9.14.2.0 via iOS 8.1.2  
+Tested on v9.26.0.0 via iOS 8.1.2  
 9.2X.X supports ca pinning which kills traffic sniffing.  
-~~Downgrade to an earlier ipa.  
-However, a ping request is observable and returns. See png~~  
+~~Downgrade to an earlier ipa.~~  
 
 
-To circumvent this, on your device run the following command via MobileTerminal:
+~~To circumvent this, on your device run the following command via MobileTerminal:
 
     wget bit.ly/SSLKillSwitch2Deb -O SSLKillSwitch2_0.10.deb 
 
@@ -37,8 +36,24 @@ Run:
 After respring, go into Settings->SSL Kill Switch->Enable "Disable Certificate Validation"
 Make sure to close SnapChat if running in the background.  
 
-Proceed with the application as normal.
+Proceed with the application as normal.~~
 
+
+All handled via paramiko. Root password is required to ssh and execute commands for debian package installation. For secure input of password wildcards are echoed. For this to work, getch must be installed via tar.
+
+Python 2.X 
+
+    wget https://pypi.python.org/packages/source/g/getch/getch-1.0-python2.tar.gz#md5=586ea0f1f16aa094ff6a30736ba03c50
+
+Python >=3.0 
+
+    wget https://pypi.python.org/packages/source/g/getch/getch-1.0.tar.gz#md5=57519f64807285bdfff8e7b62844d3ef
+
+Files will be hosted in this repository as well.
+
+Install via pip: 
+
+    sudo pip install getch-1.0*
 
 Future updates will allow more flexiblity in locale as well as allow for story downloads amongst other things.  
 
