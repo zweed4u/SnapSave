@@ -1,21 +1,37 @@
-import os
-import urllib
-import urllib2
+import os, urllib, urllib2, time, errno, subprocess, threading, socket, paramiko, sys
 from PIL import Image
-import time
-import errno
-import subprocess
-import threading
-import socket
+from scp import SCPClient
+
+#SSHv2 in Python
+debInstall=raw_input("Do you need to install SSL KillSwitch? (y/n) ")
+if debInstall=='y' or debInstall=='Y':
+	relPath=os.getcwd()
+	iphone_ip=raw_input("What is your iphone's ip? (Settings>Wi-Fi>i>IP Address) ")
+	iphone_pw=raw_input("What is your iphone's root password? ('alpine' by default) ")
+
+	ssh = paramiko.SSHClient()
+	ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+	ssh.connect(str(iphone_ip), username='root', password=str(iphone_pw))
+
+	scp = SCPClient(ssh.get_transport())
+
+	scp.put(relPath+'/com.nablac0d3.SSLKillSwitch2_0.10.deb','com.nablac0d3.SSLKillSwitch2_0.10.deb.deb')
+	stdin, stdout, stderr = ssh.exec_command('dpkg -i com.nablac0d3.SSLKillSwitch2_0.10.deb.deb')
+	print '\n'
+	for i in stdout.readlines():
+		print i
+	print '\n'
+elif debInstall=='n' or debInstall=='N':
+	pass
+else:
+	print "\nPlease rerun and enter 'y' or 'n' when prompted.\n"
+	sys.exit()
+
 
 myLocalIP=([(s.connect(('8.8.8.8', 80)), s.getsockname()[0], s.close()) for s in [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][0][1])
 
 #Flags for parse
-ua='nullDefault';
-token='nullDefault';
-uuid='nullDefault';
-prefill='nullDefault';
-funcFlag='0'	
+ua='nullDefault';token='nullDefault';uuid='nullDefault';prefill='nullDefault';funcFlag='0';
 
 #Throw in list/array to make check easier with an 'if any()'
 items=[ua,token,uuid,prefill]
