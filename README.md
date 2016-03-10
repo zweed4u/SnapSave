@@ -21,22 +21,22 @@ Tested on v9.26.0.0 via iOS 8.1.2
 ~~Downgrade to an earlier ipa.~~  
 
 
-~~To circumvent this, on your device run the following command via MobileTerminal:
+~~To circumvent this, on your device run the following command via MobileTerminal:~~
 
-    wget bit.ly/SSLKillSwitch2Deb -O SSLKillSwitch2_0.10.deb 
+    ~~wget bit.ly/SSLKillSwitch2Deb -O SSLKillSwitch2_0.10.deb~~ 
 
-Now that the debian package has been downloaded. Install this package as a root user via the command:
+~~Now that the debian package has been downloaded. Install this package as a root user via the command:~~
 
-    dpkg -i SSLKillSwitch2_0.10.deb
+    ~~dpkg -i SSLKillSwitch2_0.10.deb~~
 
-Run:
+~~Run:~~
 
-    killall -HUP SpringBoard  
+    ~~killall -HUP SpringBoard~~  
 
-After respring, go into Settings->SSL Kill Switch->Enable "Disable Certificate Validation"
-Make sure to close SnapChat if running in the background.  
+~~After respring, go into Settings->SSL Kill Switch->Enable "Disable Certificate Validation"~~
+~~Make sure to close SnapChat if running in the background.~~  
 
-Proceed with the application as normal.~~
+~~Proceed with the application as normal.~~
 
 
 All handled via paramiko. Root password is required to ssh and execute commands for debian package installation. For secure input of password wildcards are echoed. For this to work, getch must be installed via tar.
