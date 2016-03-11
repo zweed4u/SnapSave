@@ -29,11 +29,11 @@ Tested on v9.26.0.0 via iOS 8.1.2
 ~~killall -HUP SpringBoard~~  
 ~~After respring, go into Settings->SSL Kill Switch->Enable "Disable Certificate Validation"~~
 ~~Make sure to close SnapChat if running in the background.~~  
-~~Proceed with the application as normal.~~
+
 
 
 All handled via [paramiko](http://www.paramiko.org/).  
-Root password is required to ssh and execute commands for debian package installation. For secure input of password wildcards are echoed. For this to work, getch must be installed via tar.
+Root password for your iDevice is required to ssh and execute commands for debian package installation. For secure input of password wildcards are echoed. For this to work, getch must be installed via tar.
 
 Python 2.X 
 
@@ -48,6 +48,8 @@ Files will be hosted in this repository as well.
 Install tar via pip: 
 
     sudo pip install getch-1.0*
+
+After installation of SSL KillSwitch2, your device will respring. After which, make sure SnapChat is NOT running in the background and enable "Disable Certificate Validation" in Settings->SSL Kill Switch. 
 
 Future updates will allow more flexiblity in locale as well as allow for story downloads amongst other things.  
 
