@@ -5,16 +5,25 @@ from scp import SCPClient
 def cli_getch():
 	pswd="";
 	gc="";
+	pswdLen=len(pswd)
 	while 1:
 		gc = getch.getch();
 		if gc=="\n":
 			print gc;
 			break;
-		elif gc == '\x08' or gc == '\x7f': 
+		elif gc == '\x08' or gc == '\x7f'or gc=='\b'or gc==''or gc=='127': 
 			pswd = pswd[:-1]
+			pswdLen-=1
+                        sys.stdout.write('\r')
+                        sys.stdout.flush()
+                        asterisks='*'*pswdLen
+                        sys.stdout.write('\r'+str(asterisks)+' \b')
+                        
 		else:
 			pswd += gc;
-		sys.stdout.write("*")
+			pswdLen+=1
+                        sys.stdout.write("*")
+                        sys.stdout.flush()
 	return pswd;
 
 
