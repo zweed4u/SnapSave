@@ -1,4 +1,4 @@
-import os, requests, time, errno, subprocess, threading, socket, paramiko, sys, getch
+import os, sys, requests, time, errno, subprocess, threading, socket, paramiko, sys, getch
 from PIL import Image
 from scp import SCPClient
 
@@ -51,7 +51,7 @@ if debInstall=='y' or debInstall=='Y':
 	stdin, stdout, stderr = ssh.exec_command('killall -HUP SpringBoard')
 	print 'Respringing.. Please Wait!\n'
 	time.sleep(10)
-elif debInstall=='n' or debInstall=='N':
+elif debInstall=='n' or debInstall=='N'or debInstall=='':
 	pass
 else:
 	print "\nPlease rerun and enter 'y' or 'n' when prompted.\n"
@@ -113,7 +113,6 @@ raw_input("Please press Enter to begin capture of flows.\nYou'll have 10 seconds
 
 ##########SUBPROCESS ADDED##################
 #Hopefully, mitmdump is capturing flow
-print "Capturing flows for 10 seconds"
 print "Hit 'Tap to Load' on the desired snap"
 #args=['q','-w','outfile']
 #wish to see requests? exlude -q
@@ -121,6 +120,10 @@ proc = subprocess.Popen(['mitmdump','-q','-w','outfile'])#silent
 #proc = subprocess.Popen(['mitmdump','-w','outfile'])#verbose-ish
 t = threading.Timer( 10.0, timeout, [proc] )
 t.start()
+for i in range(10):
+	sys.stdout.write("\r" +'Capturing flows for '+str(10-i)+' seconds...')
+	sys.stdout.flush()
+	time.sleep(1)
 t.join()
 #############################################
 
