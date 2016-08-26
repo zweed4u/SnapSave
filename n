@@ -1,0 +1,63 @@
+11668:8:response,2150:6:reason,2:OK,13:timestamp_end,17:1459206557.475406^12:http_version,8:HTTP/1.1,11:status_code,3:200#15:timestamp_start,17:1459206557.445054^7:headers,1981:15:6:Accept,3:*/*,]26:15:Accept-Encoding,4:gzip,]27:15:Accept-Language,5:en-us,]43:32:Access-Control-Allow-Credentials,4:true,]79:28:Access-Control-Allow-Headers,43:accept, authorization, content-type, access,]67:28:Access-Control-Allow-Methods,31:GET, PUT, POST, DELETE, OPTIONS,]55:27:Access-Control-Allow-Origin,20:https://www.nike.com,]59:30:Access-Control-Request-Headers,21:origin, authorization,]39:29:Access-Control-Request-Method,3:GET,]25:17:Akamai-Origin-Hop,1:2,]33:6:Origin,20:https://www.nike.com,]88:7:Referer,74:https://www.nike.com/snkrs/thread/9b9e9b4b8a118d151749213c429f6738c3b15880,]26:6:Server,13:Apigee Router,]36:14:True-Client-IP,14:129.21.100.172,]148:10:User-Agent,129:Mozilla/5.0 (iPhone; CPU iPhone OS 7_1_2 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Mobile/11D257 Twitter for iPhone,]37:26:X-Akamai-CONFIG-LOG-DETAIL,4:true,]319:18:X-Akamai-Edgescape,292:georegion=274,country_code=US,region_code=NY,city=ROCHESTER,dma=538,msa=6840,areacode=716,county=MONROE,fips=36055,lat=43.1544,long=-77.6156,timezone=EST,zip=14602-14627+14638-14639+14642-14644+14646-14647+14649-14653+14692+14694,continent=NA,throughput=vhigh,bw=5000,asnum=4385,location_id=0,]55:24:X-EdgeConnect-Session-Id,23:c438586856f9b99e1bf262c,]69:15:X-Forwarded-For,46:129.21.100.172, 165.254.123.36, 204.188.136.16,]26:16:X-Forwarded-Port,3:443,]29:17:X-Forwarded-Proto,5:https,]22:14:Content-Length,1:0,]33:25:X-EdgeConnect-MidMile-RTT,1:2,]41:32:X-EdgeConnect-Origin-MEX-Latency,2:11,]39:13:Cache-Control,18:private, max-age=0,]43:7:Expires,29:Mon, 28 Mar 2016 23:09:18 GMT,]40:4:Date,29:Mon, 28 Mar 2016 23:09:18 GMT,]22:10:Connection,5:close,]321:10:Set-Cookie,302:ak_bmsc=AD3A7FFC8022CD4B5B000ECC3B3468EAA5FE7B24B91300009EB9F9560D7F491A~plmju4bIBSn7I3rHKAdGxe5z6JGhD1HqQIvJDi2+bZFqPQthK2klM3kR8Rs2DTQUTH6Jgo/qit26t/gp092+QkMIz2dM7JL546z/7cMIZ6hVK3a5F6sKud6ZC/Ba//0Ut8Resrv5tJT8RlF5vhWTQJ6w==; expires=Tue, 29 Mar 2016 01:09:18 GMT; path=/; domain=.nike.com; HttpOnly,]]7:content,0:,}4:type,4:http,2:id,36:84c11c1d-a5b7-417e-91d3-cb93a22a5269,5:error,0:~7:version,9:1:0#2:16#]11:client_conn,235:15:ssl_established,4:true!10:clientcert,0:~13:timestamp_end,17:1459206555.355575^7:address,57:7:address,24:12:129.21.86.23,5:52206#]8:use_ipv6,5:false!}15:timestamp_start,16:1459206553.73356^19:timestamp_ssl_setup,17:1459206554.643591^}11:server_conn,2247:15:ssl_established,4:true!14:source_address,39:7:address,7:0:,1:0#]8:use_ipv6,5:false!}13:timestamp_end,0:~7:address,55:7:address,22:12:api.nike.com,3:443#]8:use_ipv6,5:false!}15:timestamp_start,17:1459206557.351249^3:sni,12:api.nike.com,4:cert,1899:-----BEGIN CERTIFICATE-----
+MIIFTjCCBDagAwIBAgIUZpU7iPwZBC5x+v+wkhs21X5RikIwDQYJKoZIhvcNAQEL
+BQAwgY0xCzAJBgNVBAYTAk5MMRIwEAYDVQQHEwlBbXN0ZXJkYW0xJTAjBgNVBAoT
+HFZlcml6b24gRW50ZXJwcmlzZSBTb2x1dGlvbnMxEzARBgNVBAsTCkN5YmVydHJ1
+c3QxLjAsBgNVBAMTJVZlcml6b24gQWthbWFpIFN1cmVTZXJ2ZXIgQ0EgRzE0LVNI
+QTIwHhcNMTYwMTI4MjI1NTAyWhcNMTcwMTI4MjI0OTExWjBYMQswCQYDVQQGEwJV
+UzELMAkGA1UECBMCT1IxEjAQBgNVBAcTCUJlYXZlcnRvbjETMBEGA1UEChMKTmlr
+ZSwgSW5jLjETMBEGA1UEAwwKKi5uaWtlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQAD
+ggEPADCCAQoCggEBANadiigerCc9Nv0FQo6JhSELH9BNVExPiIsqspZD3yaij1QE
+Az2bKhToIzuJhFMyZ6NOL/KTcoou1DASjtFMbz50owk55zzK0RD0akdfMZiSS2VS
+ra5Q3QTfJ5kcuc7T0G9OhycwH8k9JAvOmHWrxf48npmgzFdgsojhPL3FJ5tgM1iZ
+fa7nBZQ2YuX4XVKhQV/XLrqgRCWJaozomZigEg9s8wiyXHuSa5B8EN8ozQZzYX4T
+k2FxdSKqH3lzK8xt5FlfEUyrW1bEzTfVzuTYjsFczwUppTkNXYMGtcShggC8JQPr
+0PRjWODzrdQCwTAwkELnBfXN3tUrZNp0DoZctMkCAwEAAaOCAdgwggHUMAwGA1Ud
+EwEB/wQCMAAwTAYDVR0gBEUwQzBBBgkrBgEEAbE+ATIwNDAyBggrBgEFBQcCARYm
+aHR0cHM6Ly9zZWN1cmUub21uaXJvb3QuY29tL3JlcG9zaXRvcnkwga8GCCsGAQUF
+BwEBBIGiMIGfMC0GCCsGAQUFBzABhiFodHRwOi8vdmFzc2cxNDIub2NzcC5vbW5p
+cm9vdC5jb20wNgYIKwYBBQUHMAKGKmh0dHBzOi8vY2FjZXJ0LmEub21uaXJvb3Qu
+Y29tL3Zhc3NnMTQyLmNydDA2BggrBgEFBQcwAoYqaHR0cHM6Ly9jYWNlcnQuYS5v
+bW5pcm9vdC5jb20vdmFzc2cxNDIuZGVyMBUGA1UdEQQOMAyCCioubmlrZS5jb20w
+DgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAf
+BgNVHSMEGDAWgBT4vfqvc3fGxxv5S00Rp9Ezr69yETA+BgNVHR8ENzA1MDOgMaAv
+hi1odHRwOi8vdmFzc2cxNDIuY3JsLm9tbmlyb290LmNvbS92YXNzZzE0Mi5jcmww
+HQYDVR0OBBYEFAJAANDdBNBehsJQibT49DzGIgc8MA0GCSqGSIb3DQEBCwUAA4IB
+AQBPCrfPmtl/+72XEp/XtJcaDI0LLsbdMeBsTdqVD6zF7Zq7OOkh8Gt6rWTIetPQ
+5LonzA7RAFEqL0CcD9nHMC/6EeKeNSbXqoPyYMO/JMFGq0xZnFONAzxT/DYrdCct
+5Vj7X3bFcYgnVSoqHhA+BDtVZQS5M7cyWs86wSZFKLHYZbQir1IqUf72mfmshWZ8
+cUOLAWJq/WfWfFU+2adrgo8dHeFStIfFNnK1fr4PF1HWJESj2q0y+3SnGtpfvt+r
+1xCWi4qwqsOaze+OdFvvvdEEmxGghk+1WNxssaB4MutL/qJkxptqEqM3UgXGOfjf
+8hZvIG7s/fJbNz8QO3wAoni9
+-----END CERTIFICATE-----
+,19:timestamp_ssl_setup,17:1459206557.415376^3:via,0:~19:timestamp_tcp_setup,17:1459206557.366799^}11:intercepted,5:false!7:request,997:9:is_replay,4:true!4:port,3:443#12:stickycookie,5:false!13:timestamp_end,17:1459206554.819427^4:path,83:/commerce/launchwaitline/launch/waitline/turnToken/53228c9eeb4cb6370582e8a6350671b8,15:timestamp_start,17:1459206554.669103^7:headers,601:23:4:host,12:api.nike.com,]34:16:Proxy-Connection,10:keep-alive,]27:15:Accept-Language,5:en-us,]39:29:Access-Control-Request-Method,3:GET,]36:15:Accept-Encoding,13:gzip, deflate,]15:6:Accept,3:*/*,]33:6:Origin,20:https://www.nike.com,]22:14:Content-Length,1:0,]59:30:Access-Control-Request-Headers,21:origin, authorization,]28:10:Connection,10:keep-alive,]148:10:User-Agent,129:Mozilla/5.0 (iPhone; CPU iPhone OS 7_1_2 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Mobile/11D257 Twitter for iPhone,]88:7:Referer,74:https://www.nike.com/snkrs/thread/9b9e9b4b8a118d151749213c429f6738c3b15880,]]7:content,0:,6:method,7:OPTIONS,4:host,12:api.nike.com,17:first_line_format,8:relative,12:http_version,8:HTTP/1.1,6:scheme,5:https,10:stickyauth,5:false!}6:backup,5836:8:response,2150:6:reason,2:OK,13:timestamp_end,17:1459206555.298711^12:http_version,8:HTTP/1.1,11:status_code,3:200#15:timestamp_start,17:1459206554.862259^7:headers,1981:15:6:Accept,3:*/*,]26:15:Accept-Encoding,4:gzip,]27:15:Accept-Language,5:en-us,]43:32:Access-Control-Allow-Credentials,4:true,]79:28:Access-Control-Allow-Headers,43:accept, authorization, content-type, access,]67:28:Access-Control-Allow-Methods,31:GET, PUT, POST, DELETE, OPTIONS,]55:27:Access-Control-Allow-Origin,20:https://www.nike.com,]59:30:Access-Control-Request-Headers,21:origin, authorization,]39:29:Access-Control-Request-Method,3:GET,]25:17:Akamai-Origin-Hop,1:2,]33:6:Origin,20:https://www.nike.com,]88:7:Referer,74:https://www.nike.com/snkrs/thread/9b9e9b4b8a118d151749213c429f6738c3b15880,]26:6:Server,13:Apigee Router,]36:14:True-Client-IP,14:129.21.100.172,]148:10:User-Agent,129:Mozilla/5.0 (iPhone; CPU iPhone OS 7_1_2 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Mobile/11D257 Twitter for iPhone,]37:26:X-Akamai-CONFIG-LOG-DETAIL,4:true,]319:18:X-Akamai-Edgescape,292:georegion=274,country_code=US,region_code=NY,city=ROCHESTER,dma=538,msa=6840,areacode=716,county=MONROE,fips=36055,lat=43.1544,long=-77.6156,timezone=EST,zip=14602-14627+14638-14639+14642-14644+14646-14647+14649-14653+14692+14694,continent=NA,throughput=vhigh,bw=5000,asnum=4385,location_id=0,]55:24:X-EdgeConnect-Session-Id,23:c438586856f9b99c1bf24ac,]69:15:X-Forwarded-For,46:129.21.100.172, 165.254.123.36, 204.188.136.16,]26:16:X-Forwarded-Port,3:443,]29:17:X-Forwarded-Proto,5:https,]22:14:Content-Length,1:0,]33:25:X-EdgeConnect-MidMile-RTT,1:4,]41:32:X-EdgeConnect-Origin-MEX-Latency,2:12,]39:13:Cache-Control,18:private, max-age=0,]43:7:Expires,29:Mon, 28 Mar 2016 23:09:16 GMT,]40:4:Date,29:Mon, 28 Mar 2016 23:09:16 GMT,]22:10:Connection,5:close,]321:10:Set-Cookie,302:ak_bmsc=7EC8B9E41CEC3EFC1137A55415C15700A5FE7B24B91300009CB9F956FE6FCC28~plsIc9IzzLbOrMTPdEIgf9lVhhld008w+DqF98oD67e32ihriFaX8i7Y0zubEkKN/JNFabm3zcXP9l6CxXSaeen8tzxZMeHpUk17eRVMozBM2rP/VT/pLCxHeRhPxU32L23rJvZI7N6Cvf/bVVrgO1uw==; expires=Tue, 29 Mar 2016 01:09:16 GMT; path=/; domain=.nike.com; HttpOnly,]]7:content,0:,}4:type,4:http,2:id,36:84c11c1d-a5b7-417e-91d3-cb93a22a5269,5:error,0:~7:version,9:1:0#2:16#]11:client_conn,235:15:ssl_established,4:true!10:clientcert,0:~13:timestamp_end,17:1459206555.355575^7:address,57:7:address,24:12:129.21.86.23,5:52206#]8:use_ipv6,5:false!}15:timestamp_start,16:1459206553.73356^19:timestamp_ssl_setup,17:1459206554.643591^}11:server_conn,2265:15:ssl_established,4:true!14:source_address,39:7:address,7:0:,1:0#]8:use_ipv6,5:false!}13:timestamp_end,17:1459206555.354952^7:address,55:7:address,22:12:api.nike.com,3:443#]8:use_ipv6,5:false!}15:timestamp_start,17:1459206553.811562^3:sni,12:api.nike.com,4:cert,1899:-----BEGIN CERTIFICATE-----
+MIIFTjCCBDagAwIBAgIUZpU7iPwZBC5x+v+wkhs21X5RikIwDQYJKoZIhvcNAQEL
+BQAwgY0xCzAJBgNVBAYTAk5MMRIwEAYDVQQHEwlBbXN0ZXJkYW0xJTAjBgNVBAoT
+HFZlcml6b24gRW50ZXJwcmlzZSBTb2x1dGlvbnMxEzARBgNVBAsTCkN5YmVydHJ1
+c3QxLjAsBgNVBAMTJVZlcml6b24gQWthbWFpIFN1cmVTZXJ2ZXIgQ0EgRzE0LVNI
+QTIwHhcNMTYwMTI4MjI1NTAyWhcNMTcwMTI4MjI0OTExWjBYMQswCQYDVQQGEwJV
+UzELMAkGA1UECBMCT1IxEjAQBgNVBAcTCUJlYXZlcnRvbjETMBEGA1UEChMKTmlr
+ZSwgSW5jLjETMBEGA1UEAwwKKi5uaWtlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQAD
+ggEPADCCAQoCggEBANadiigerCc9Nv0FQo6JhSELH9BNVExPiIsqspZD3yaij1QE
+Az2bKhToIzuJhFMyZ6NOL/KTcoou1DASjtFMbz50owk55zzK0RD0akdfMZiSS2VS
+ra5Q3QTfJ5kcuc7T0G9OhycwH8k9JAvOmHWrxf48npmgzFdgsojhPL3FJ5tgM1iZ
+fa7nBZQ2YuX4XVKhQV/XLrqgRCWJaozomZigEg9s8wiyXHuSa5B8EN8ozQZzYX4T
+k2FxdSKqH3lzK8xt5FlfEUyrW1bEzTfVzuTYjsFczwUppTkNXYMGtcShggC8JQPr
+0PRjWODzrdQCwTAwkELnBfXN3tUrZNp0DoZctMkCAwEAAaOCAdgwggHUMAwGA1Ud
+EwEB/wQCMAAwTAYDVR0gBEUwQzBBBgkrBgEEAbE+ATIwNDAyBggrBgEFBQcCARYm
+aHR0cHM6Ly9zZWN1cmUub21uaXJvb3QuY29tL3JlcG9zaXRvcnkwga8GCCsGAQUF
+BwEBBIGiMIGfMC0GCCsGAQUFBzABhiFodHRwOi8vdmFzc2cxNDIub2NzcC5vbW5p
+cm9vdC5jb20wNgYIKwYBBQUHMAKGKmh0dHBzOi8vY2FjZXJ0LmEub21uaXJvb3Qu
+Y29tL3Zhc3NnMTQyLmNydDA2BggrBgEFBQcwAoYqaHR0cHM6Ly9jYWNlcnQuYS5v
+bW5pcm9vdC5jb20vdmFzc2cxNDIuZGVyMBUGA1UdEQQOMAyCCioubmlrZS5jb20w
+DgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAf
+BgNVHSMEGDAWgBT4vfqvc3fGxxv5S00Rp9Ezr69yETA+BgNVHR8ENzA1MDOgMaAv
+hi1odHRwOi8vdmFzc2cxNDIuY3JsLm9tbmlyb290LmNvbS92YXNzZzE0Mi5jcmww
+HQYDVR0OBBYEFAJAANDdBNBehsJQibT49DzGIgc8MA0GCSqGSIb3DQEBCwUAA4IB
+AQBPCrfPmtl/+72XEp/XtJcaDI0LLsbdMeBsTdqVD6zF7Zq7OOkh8Gt6rWTIetPQ
+5LonzA7RAFEqL0CcD9nHMC/6EeKeNSbXqoPyYMO/JMFGq0xZnFONAzxT/DYrdCct
+5Vj7X3bFcYgnVSoqHhA+BDtVZQS5M7cyWs86wSZFKLHYZbQir1IqUf72mfmshWZ8
+cUOLAWJq/WfWfFU+2adrgo8dHeFStIfFNnK1fr4PF1HWJESj2q0y+3SnGtpfvt+r
+1xCWi4qwqsOaze+OdFvvvdEEmxGghk+1WNxssaB4MutL/qJkxptqEqM3UgXGOfjf
+8hZvIG7s/fJbNz8QO3wAoni9
+-----END CERTIFICATE-----
+,19:timestamp_ssl_setup,17:1459206553.963192^3:via,0:~19:timestamp_tcp_setup,17:1459206553.837643^}11:intercepted,5:false!7:request,998:9:is_replay,5:false!4:port,3:443#12:stickycookie,5:false!13:timestamp_end,17:1459206554.819427^4:path,83:/commerce/launchwaitline/launch/waitline/turnToken/53228c9eeb4cb6370582e8a6350671b8,15:timestamp_start,17:1459206554.669103^7:headers,601:23:4:host,12:api.nike.com,]34:16:Proxy-Connection,10:keep-alive,]27:15:Accept-Language,5:en-us,]39:29:Access-Control-Request-Method,3:GET,]36:15:Accept-Encoding,13:gzip, deflate,]15:6:Accept,3:*/*,]33:6:Origin,20:https://www.nike.com,]22:14:Content-Length,1:0,]59:30:Access-Control-Request-Headers,21:origin, authorization,]28:10:Connection,10:keep-alive,]148:10:User-Agent,129:Mozilla/5.0 (iPhone; CPU iPhone OS 7_1_2 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Mobile/11D257 Twitter for iPhone,]88:7:Referer,74:https://www.nike.com/snkrs/thread/9b9e9b4b8a118d151749213c429f6738c3b15880,]]7:content,0:,6:method,7:OPTIONS,4:host,12:api.nike.com,17:first_line_format,8:relative,12:http_version,8:HTTP/1.1,6:scheme,5:https,10:stickyauth,5:false!}}}

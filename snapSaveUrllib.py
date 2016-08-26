@@ -17,7 +17,15 @@ def cli_getch():
 		sys.stdout.write("*")
 	return pswd;
 
-
+chrooted=raw_input("Are you on a chrooted system? ")
+if chrooted=='y' or chrooted=='Y':
+	#need error handling here or within the shell file
+	subprocess.call(['sudo','./setmitmproxy.sh'])
+elif chrooted=='n' or chrooted=='N':
+	pass
+else:
+	print "\nPlease rerun and enter 'y' or 'n' when prompted.\n"
+	sys.exit()
 
 #SSHv2 in Python
 print '\n'

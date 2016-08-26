@@ -1,8 +1,10 @@
 #!/bin/bash -e
 
 if [ $# -lt 1 ]; then
-    echo "usage: $0 --set or $0 --unset"
-    exit 0
+    #echo "usage: $0 --set or $0 --unset"
+    #exit 0
+    SET=1
+#Deprecated conditional -set argument by default
 else
     if [ $1 = "--set" ]
     then 
@@ -15,7 +17,6 @@ else
         exit 0
     fi
 fi
-
 IP=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1')
 
 # Open firewall to accept connections 
