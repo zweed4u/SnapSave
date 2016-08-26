@@ -1,29 +1,20 @@
-import os, sys,urllib, urllib2, time, errno, subprocess, threading, socket, paramiko, sys, getch
+import os, urllib, urllib2, time, errno, subprocess, threading, socket, paramiko, sys, getch
 from PIL import Image
 from scp import SCPClient
 
 def cli_getch():
 	pswd="";
 	gc="";
-	pswdLen=len(pswd)
 	while 1:
 		gc = getch.getch();
 		if gc=="\n":
 			print gc;
 			break;
-		elif gc == '\x08' or gc == '\x7f'or gc=='\b'or gc==''or gc=='127': 
+		elif gc == '\x08' or gc == '\x7f': 
 			pswd = pswd[:-1]
-			pswdLen-=1
-                        sys.stdout.write('\r')
-                        sys.stdout.flush()
-                        asterisks='*'*pswdLen
-                        sys.stdout.write('\r'+str(asterisks)+' \b')
-                        
 		else:
 			pswd += gc;
-			pswdLen+=1
-                        sys.stdout.write("*")
-                        sys.stdout.flush()
+		sys.stdout.write("*")
 	return pswd;
 
 chrooted=raw_input("Are you on a chrooted system? ")
@@ -61,7 +52,7 @@ if debInstall=='y' or debInstall=='Y':
 	stdin, stdout, stderr = ssh.exec_command('killall -HUP SpringBoard')
 	print 'Respringing.. Please Wait!\n'
 	time.sleep(10)
-elif debInstall=='n' or debInstall=='N'or debInstall=='':
+elif debInstall=='n' or debInstall=='N':
 	pass
 else:
 	print "\nPlease rerun and enter 'y' or 'n' when prompted.\n"
@@ -123,20 +114,15 @@ raw_input("Please press Enter to begin capture of flows.\nYou'll have 10 seconds
 
 ##########SUBPROCESS ADDED##################
 #Hopefully, mitmdump is capturing flow
+print "Capturing flows for 10 seconds"
 print "Hit 'Tap to Load' on the desired snap"
 #args=['q','-w','outfile']
 #wish to see requests? exlude -q
-
 proc = subprocess.Popen(['mitmdump','-q','-w','outfile'])#silent
 #proc = subprocess.Popen(['mitmdump','-w','outfile'])#verbose-ish
 t = threading.Timer( 10.0, timeout, [proc] )
 t.start()
-for i in range(10):
-	sys.stdout.write("\r" +'Capturing flows for '+str(10-i)+' seconds...')
-	sys.stdout.flush()
-	time.sleep(1)
 t.join()
-
 #############################################
 
 ###PARSE outfile###
